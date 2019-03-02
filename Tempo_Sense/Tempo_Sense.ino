@@ -3,8 +3,9 @@ Name:		Tempo_Sense.ino
 Created:	02/03/2019 15:57:04
 Author:	@fenixbinario | www.fenixbinario.com
 
+Address 0x00-0x12 for DS3231
 ATTINY - CONNECTION
-
+							
 Attiny85			POWER		DS3231		WS2812
 PB4					GND			GND			GND
 PB8					VCC			5V			5V 
