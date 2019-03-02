@@ -1,7 +1,7 @@
 /*
  Name:		Tempo_Sense.ino
  Created:	02/03/2019 15:57:04
- Author:	jesus
+ Author:	@fenixbinario
 */
 
 // the setup function runs once when you press reset or power the board
