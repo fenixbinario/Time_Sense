@@ -25,7 +25,14 @@ PB1 PCNINT1									DATA
 #include <EasyNeoPixels.h>
 
 //PROTOTYPE
+void offHot(void);						//All heat source turned OFF
+void onHot(void);						//Heat source turned ON
+void rotationBegin(void);				//Within the setup() function 
+void rotationSolar(void);				//Turn on only the heat source associated with the rotation of the sun.
 
+
+//GLOBAL
+DateTime rotacionHora;
 
 // the setup function runs once when you press reset or power the board
 void setup() {
