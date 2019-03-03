@@ -18,18 +18,40 @@ _Retorna la fecha en el momento de la compilación._
 time_t compileTime(void);				//Function to return the compile date and time as a time_t value
 ```
 _Retorna ```TRUE``` si ha cambiado la hora._ 
-	* _Ejemplo: if(17 != 16) ... retorna `TRUE`._
-	* _Ejemplo: if(17 != 17) ... retorna `FALSE`._
+* Ejemplo: if(17 != 16) ... retorna `TRUE`.
+* Ejemplo: if(17 != 17) ... retorna `FALSE`.
 ``` c++
 bool timeChange(void);					//Change Hour
 ```
+
+``` c++
 void LedErrors(void);					//RED (Error System) Blue(Busy System) Green(System is Work)
+```
+``` c++
 void setColor(int, int, int);			//LedError color blink
+```
+
+``` c++
 void offHot(void);						//All heat source turned OFF
+```
+
+``` c++
 void onHot(void);						//Heat source turned ON
+```
+
+``` c++
 void setHot(byte);						//Heat ON
+```
+
+``` c++
 void rotationBegin(void);				//Within the setup() function 
+```
+
+``` c++
 void rotationSolar(void);				//Turn on only the heat source associated with the rotation of the sun.
+ ```
+
+
 ### *Pasos*
 * Para desplegar y construir por ti mismo este órgano y sentido sigue **Desplequegar**.
 * Sigue cada unos de los pasos.
