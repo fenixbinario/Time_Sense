@@ -194,9 +194,11 @@ _Descomenta estas líneas para ajustarlo con la hora de tu pc._
 ..
 void rotationBegin(void)
 {
-	// COMMENT THIS LINE! set the RTC time and date to the compile time
-	//	RTC.set(now());
-	//	RTC.set(compileTime()); 
+	// DESCOMMENT THIS LINE! 
+	//	RTC.set(now()); 
+
+	// OR DESCOMMENT THIS LINE!  
+	//	RTC.set(compileTime());  
 ...
 ..
 .
