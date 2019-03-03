@@ -13,11 +13,11 @@ _Este sentido te permite tener una percepción del tiempo solar sobre la tierra.
 
 ## CODIGO
 
-_Retorna la fecha en el momento de la compilación._
+##### Retorna la fecha en el momento de la compilación.
 ``` c++
 time_t compileTime(void);				//Function to return the compile date and time as a time_t value
 ```
-_Retorna ```TRUE``` si ha cambiado la hora._ 
+##### Retorna ```TRUE``` si ha cambiado la hora.
 * _Ejemplo: if(17 != 16) ... retorna `TRUE` ._
 * _Ejemplo: if(17 != 17) ... retorna `FALSE` ._
 ``` c++
