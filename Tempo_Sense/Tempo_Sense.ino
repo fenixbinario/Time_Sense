@@ -63,6 +63,8 @@ void loop()
 
 
 //FUNCTION DECLARATION
+
+
 bool timeChange(void)
 {
 	t = now();
@@ -86,53 +88,53 @@ void setHot(byte _hour)
 	//Turn On source hot
 	switch (_hour)
 	{
-	case Zero:		writeEasyNeoPixel(1, 255, 0, 0);
+	case Zero:		writeEasyNeoPixel(1, 255, 0, 0);										//PIN 1
 		break;
-	case One:		writeEasyNeoPixel(1, 0, 255, 0);
+	case One:		writeEasyNeoPixel(1, 255, 255, 0);										//PIN 1 & 2
 		break;
-	case Two:		writeEasyNeoPixel(1, 0, 0, 255);
+	case Two:		writeEasyNeoPixel(1, 0, 255, 0);										//PIN 2
 		break;
-	case Three:		writeEasyNeoPixel(2, 255, 0, 0);
+	case Three:		writeEasyNeoPixel(1, 0, 255, 255);										//PIN 2 & 3
 		break;
-	case Four:		writeEasyNeoPixel(2, 0, 255, 0);
+	case Four:		writeEasyNeoPixel(1, 0, 0, 255);										//PIN 3
 		break;
-	case Five:		writeEasyNeoPixel(2, 0, 0, 255);
+	case Five:		writeEasyNeoPixel(1, 0, 0, 255);	writeEasyNeoPixel(2, 255, 0, 0);	//PIN 3 & 4
 		break;
-	case Six:		writeEasyNeoPixel(3, 255, 0, 0);
+	case Six:		writeEasyNeoPixel(2, 255, 0, 0);										//PIN 4
 		break;
-	case Seven:		writeEasyNeoPixel(3, 0, 255, 0);
+	case Seven:		writeEasyNeoPixel(2, 255, 255, 0);										//PIN 4 & 5	
 		break;
-	case Eight:		writeEasyNeoPixel(3, 0, 0, 255);
+	case Eight:		writeEasyNeoPixel(2, 0, 255, 0);										//PIN 5
 		break;
-	case Nine:		writeEasyNeoPixel(4, 255, 0, 0);
+	case Nine:		writeEasyNeoPixel(2, 0, 255, 255);										//PIN 5 & 6
 		break;
-	case Ten:		writeEasyNeoPixel(4, 0, 255, 0);
+	case Ten:		writeEasyNeoPixel(2, 0, 0, 255);										//PIN 6
 		break;
-	case Eleven:	writeEasyNeoPixel(4, 0, 0, 255);
+	case Eleven:	writeEasyNeoPixel(2, 0, 0, 255);	writeEasyNeoPixel(3, 255, 0, 0);	//PIN 6 & 7
 		break;
-	case Twleve:	writeEasyNeoPixel(1, 255, 0, 0);
+	case Twleve:	writeEasyNeoPixel(3, 255, 0, 0);										//PIN 7
 		break;
-	case Thirteen:	writeEasyNeoPixel(1, 0, 255, 0);
+	case Thirteen:	writeEasyNeoPixel(3, 255, 255, 0);										//PIN 7 & 8
 		break;
-	case Fourteen:	writeEasyNeoPixel(1, 0, 0, 255);
+	case Fourteen:	writeEasyNeoPixel(3, 0, 255, 0);										//PIN 8
 		break;
-	case Fifteen:	writeEasyNeoPixel(2, 255, 0, 0);
+	case Fifteen:	writeEasyNeoPixel(3, 0, 255, 255);										//PIN 8 & 9
 		break;
-	case Sixteen:	writeEasyNeoPixel(2, 0, 255, 0);
+	case Sixteen:	writeEasyNeoPixel(3, 0, 0, 255);										//PIN 9
 		break;
-	case Seventeen:	writeEasyNeoPixel(2, 0, 0, 255);
+	case Seventeen:	writeEasyNeoPixel(3, 0, 0, 255);	writeEasyNeoPixel(4, 255, 0, 0);	//PIN 9 & 10
 		break;
-	case Eighteen:	writeEasyNeoPixel(3, 255, 0, 0);
+	case Eighteen:	writeEasyNeoPixel(4, 255, 0, 0);										//PIN 10
 		break;
-	case Nineteen:	writeEasyNeoPixel(3, 0, 255, 0);
+	case Nineteen:	writeEasyNeoPixel(4, 255, 255, 0);										//PIN 10 & 11
 		break;
-	case Twenty:	writeEasyNeoPixel(3, 0, 0, 255);
+	case Twenty:	writeEasyNeoPixel(4, 0, 255, 0);										//PIN 11
 		break;
-	case TwentyOne:	writeEasyNeoPixel(4, 255, 0, 0);
+	case TwentyOne:	writeEasyNeoPixel(4, 0, 255, 255);										//PIN 11 & 12
 		break;
-	case TwentyTwo:	writeEasyNeoPixel(4, 0, 255, 0);
+	case TwentyTwo:	writeEasyNeoPixel(4, 0, 0, 255);										//PIN 12
 		break;
-	case TwentyThree:	writeEasyNeoPixel(4, 0, 0, 255);
+	case TwentyThree:	writeEasyNeoPixel(4, 0, 0, 255); writeEasyNeoPixel(1, 255, 0, 0);	//PIN 12 & 1
 		break;
 	default:
 		break;
@@ -148,7 +150,6 @@ void onHot(void)
 
 	//TurnON
 	setHot(h);
-
 };
 
 void rotationBegin(void)
