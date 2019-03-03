@@ -1,6 +1,6 @@
 # Time_Sense
 
-_Este sentido te permite tener una percepción del tiempo solar sobre la tierra._
+_Este sentido te permite tener una percepción de la posición de la luz sol sobre la tierra, según esta vaya girando._
 
 
 
