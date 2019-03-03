@@ -6,8 +6,8 @@ Author:	@fenixbinario | www.fenixbinario.com
 Address 0x00-0x12 for DS3231
 
 ### Software
-* Instalar	Tarjeta:	`<ATTinyCore.h>`	by *Spence Konde*		[Más INFO](https://github.com/SpenceKonde/ATTinyCore).
-* Instalar	Librería:	---------------		by *Adafruit*			[Más INFO](https://github.com/adafruit/Adafruit_NeoPixel).
+* Instalar	Tarjeta:	------------------	by *Spence Konde*		[Más INFO](https://github.com/SpenceKonde/ATTinyCore).
+* Instalar	Librería:	------------------	by *Adafruit*			[Más INFO](https://github.com/adafruit/Adafruit_NeoPixel).
 * Instalar	Librería:	`<EasyNeoPixels.h>`	by *Evelyn Masso*		[Más INFO](https://github.com/outofambit/easy-neopixels).
 * Instalar	Librería:	`<DS3232RTC.h>`		by *JChristensen*		[Más INFO](https://github.com/JChristensen/DS3232RTC).
 

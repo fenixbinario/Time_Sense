@@ -7,10 +7,10 @@ _Este sentido te permite tener una percepción del tiempo solar sobre la tierra.
 ## REQUISITOS
 
 ### Software
-* Instalar	Tarjeta:	`<ATTinyCore.h>`	by *Spence Konde*		[Más INFO](https://github.com/SpenceKonde/ATTinyCore).
-* Instalar	Librería:	---------------		by *Adafruit*			[Más INFO](https://github.com/adafruit/Adafruit_NeoPixel).
-* Instalar	Librería:	`<EasyNeoPixels.h>`	by *Evelyn Masso*		[Más INFO](https://github.com/outofambit/easy-neopixels).
-* Instalar	Librería:	`<DS3232RTC.h>`		by *JChristensen*		[Más INFO](https://github.com/JChristensen/DS3232RTC).
+* Instalar	Tarjeta:	------------------	by **Spence Konde**		[Más INFO](https://github.com/SpenceKonde/ATTinyCore).
+* Instalar	Librería:	------------------	by **Adafruit**			[Más INFO](https://github.com/adafruit/Adafruit_NeoPixel).
+* Instalar	Librería:	`<EasyNeoPixels.h>`	by **Evelyn Masso**		[Más INFO](https://github.com/outofambit/easy-neopixels).
+* Instalar	Librería:	`<DS3232RTC.h>`		by **JChristensen**		[Más INFO](https://github.com/JChristensen/DS3232RTC).
 
 ### Hardware
 * Atiny85	* 1	Unidad.
@@ -181,17 +181,22 @@ void loop()
 
 ## DESPLIEGUE
 *PASOS*
-* Para desplegar y construir por ti mismo este órgano y sentido sigue **Desplequegar**.
-* Sigue cada unos de los pasos.
-* Que hardware necesitas?
-
-_Descripción del codigo de arduino_
-
+* Asegurese de que tienes todo el hardware, conexiones, alimentación, tarjeta y librerías. 
+* Monte en una tarjeta de desarrollo las conexiones o ensamble una PCB.
+* Ten cuidado lo la alimentación.
+* Añade un condensador electrolitico entre el PIN RESET y GND del programador.
+* Asegurate de tener configurado el DS3231 ¿Tienes el reloj con la hora ajustada?
+_Descomenta estas líneas para ajustarlo con la hora de tu pc_
 ``` c++
-
-#include <TinyWireM>
-#include <Time_Sense>
-
-TimeSense newSense;
-
+.
+..
+..
+void rotationBegin(void)
+{
+	// COMMENT THIS LINE! set the RTC time and date to the compile time
+	//	RTC.set(now());
+	//	RTC.set(compileTime()); 
+...
+..
+.
 ```
