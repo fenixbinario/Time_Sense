@@ -13,6 +13,9 @@ PB2	PCINT2						SCL
 PB0 PCINT0						SDA
 PB1 PCNINT1									DATA
 */
+//EARTH HOURS
+enum Hours {Zero, One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Eleven, Twleve, Thirteen, Fourteen, Fifteen, Sixteen, Seventeen, Eighteen, Nineteen, Twenty, TwentyOne, TwentyTwo, TwentyThree}hours;
+
 //LED INDICATOR
 enum ErrorSystem : byte
 {
@@ -21,8 +24,8 @@ enum ErrorSystem : byte
 	TIME_SET, 
 	TIME_GET,
 	TIME_CHANGE,
-};
-ErrorSystem status;
+}status;
+
 //LIBRARY
 //#include <TinyDebugKnockBang.h>
 
@@ -32,11 +35,12 @@ ErrorSystem status;
 
 //PROTOTYPE
 time_t compileTime(void);				//Function to return the compile date and time as a time_t value
-bool timeChange(void);				//Change Hour
-void LedErrors(void);			//RED (Error System) Blue(Busy System) Green(System is Work)
-void setColor(int, int, int);
+bool timeChange(void);					//Change Hour
+void LedErrors(void);					//RED (Error System) Blue(Busy System) Green(System is Work)
+void setColor(int, int, int);			//LedError color blink
 void offHot(void);						//All heat source turned OFF
 void onHot(void);						//Heat source turned ON
+void setHot(byte);						//Heat ON
 void rotationBegin(void);				//Within the setup() function 
 void rotationSolar(void);				//Turn on only the heat source associated with the rotation of the sun.
 
@@ -77,14 +81,74 @@ void offHot(void)
 	}
 };
 
+void setHot(byte _hour)
+{
+	//Turn On source hot
+	switch (_hour)
+	{
+	case Zero:		writeEasyNeoPixel(1, 255, 0, 0);
+		break;
+	case One:		writeEasyNeoPixel(1, 0, 255, 0);
+		break;
+	case Two:		writeEasyNeoPixel(1, 0, 0, 255);
+		break;
+	case Three:		writeEasyNeoPixel(2, 255, 0, 0);
+		break;
+	case Four:		writeEasyNeoPixel(2, 0, 255, 0);
+		break;
+	case Five:		writeEasyNeoPixel(2, 0, 0, 255);
+		break;
+	case Six:		writeEasyNeoPixel(3, 255, 0, 0);
+		break;
+	case Seven:		writeEasyNeoPixel(3, 0, 255, 0);
+		break;
+	case Eight:		writeEasyNeoPixel(3, 0, 0, 255);
+		break;
+	case Nine:		writeEasyNeoPixel(4, 255, 0, 0);
+		break;
+	case Ten:		writeEasyNeoPixel(4, 0, 255, 0);
+		break;
+	case Eleven:	writeEasyNeoPixel(4, 0, 0, 255);
+		break;
+	case Twleve:	writeEasyNeoPixel(1, 255, 0, 0);
+		break;
+	case Thirteen:	writeEasyNeoPixel(1, 0, 255, 0);
+		break;
+	case Fourteen:	writeEasyNeoPixel(1, 0, 0, 255);
+		break;
+	case Fifteen:	writeEasyNeoPixel(2, 255, 0, 0);
+		break;
+	case Sixteen:	writeEasyNeoPixel(2, 0, 255, 0);
+		break;
+	case Seventeen:	writeEasyNeoPixel(2, 0, 0, 255);
+		break;
+	case Eighteen:	writeEasyNeoPixel(3, 255, 0, 0);
+		break;
+	case Nineteen:	writeEasyNeoPixel(3, 0, 255, 0);
+		break;
+	case Twenty:	writeEasyNeoPixel(3, 0, 0, 255);
+		break;
+	case TwentyOne:	writeEasyNeoPixel(4, 255, 0, 0);
+		break;
+	case TwentyTwo:	writeEasyNeoPixel(4, 0, 255, 0);
+		break;
+	case TwentyThree:	writeEasyNeoPixel(4, 0, 0, 255);
+		break;
+	default:
+		break;
+	}
+};
 void onHot(void) 
 {	
 	//Turn Off
 	offHot();
-	//Turn On source hot
+	
+	//Update Time
 	byte h = hour(t);
-	byte m = minute(t);
-	byte s = second(t);
+
+	//TurnON
+	setHot(h);
+
 };
 
 void rotationBegin(void)
