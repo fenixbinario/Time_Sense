@@ -195,7 +195,7 @@ _Descomenta estas líneas para ajustarlo con la hora de tu pc._
 void rotationBegin(void)
 {
 	// DESCOMMENT THIS LINE! 
-	//	RTC.set(now()); 
+	RTC.set(now()); 
 
 	// OR DESCOMMENT THIS LINE!  
 	//	RTC.set(compileTime());  
