@@ -32,6 +32,7 @@ bool timeChange(void);
 void LedErrors(void);
 ```
 |	##### Color	|	##### Parpadeo	|	##### Status	|
+|	----		|	----			|	----			|
 |	_Verde_		|			1		|	WORK			|
 |	_Rojo_		|			2		|	TIME_SET		|
 
