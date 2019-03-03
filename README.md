@@ -31,10 +31,13 @@ bool timeChange(void);
 ``` c++
 void LedErrors(void);
 ```
-|	##### Color	|	##### Parpadeo	|	##### Status	|
-|	----		|	----			|	----			|
-|	_Verde_		|			1		|	WORK			|
-|	_Rojo_		|			2		|	TIME_SET		|
+|	 Color		|		 Parpadeo	|		Status		|
+|	----		|		----		|		----		|
+|	_Verde_		|			1		|		WORK		|
+|	_Rojo_		|			2		|	TIME_COMPILE	|
+|	_Rojo_		|			3		|	TIME_SET		|
+|	_Rojo_		|			4		|	TIME_GET		|
+|	_Azul_		|			5		|	TIME_CHANGE		|
 
 
 
