@@ -18,8 +18,8 @@ _Retorna la fecha en el momento de la compilación._
 time_t compileTime(void);				//Function to return the compile date and time as a time_t value
 ```
 _Retorna ```TRUE``` si ha cambiado la hora._ 
-* Ejemplo: if(17 != 16) ... retorna `TRUE`.
-* Ejemplo: if(17 != 17) ... retorna `FALSE`.
+* _Ejemplo: if(17 != 16) ... retorna `TRUE` ._
+* _Ejemplo: if(17 != 17) ... retorna `FALSE` ._
 ``` c++
 bool timeChange(void);					//Change Hour
 ```
