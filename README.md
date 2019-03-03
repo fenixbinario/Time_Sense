@@ -186,7 +186,8 @@ void loop()
 * Ten cuidado lo la alimentación.
 * Añade un condensador electrolitico entre el PIN RESET y GND del programador.
 * Asegurate de tener configurado el DS3231 ¿Tienes el reloj con la hora ajustada?
-_Descomenta estas líneas para ajustarlo con la hora de tu pc_
+
+_Descomenta estas líneas para ajustarlo con la hora de tu pc._
 ``` c++
 .
 ..

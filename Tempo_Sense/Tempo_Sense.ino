@@ -171,8 +171,10 @@ void onHot(void)
 
 void rotationBegin(void)
 {
-	// COMMENT THIS LINE! set the RTC time and date to the compile time
-	//	RTC.set(now());
+	// DESCOMMENT THIS LINE! 
+	//	RTC.set(now()); 
+
+	// OR DESCOMMENT THIS LINE!  
 	//	RTC.set(compileTime());   
 	
 	// SetUp-> setSyncProvider() causes the Time library to synchronize with the
