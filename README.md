@@ -8,8 +8,17 @@ _Este sentido te permite tener una percepción del tiempo solar sobre la tierra.
 * Tener instalado `ATTinyCore` by Spence Konde [Más INFO](https://github.com/SpenceKonde/ATTinyCore).
 
 ### Hardware
-* Atiny85 | Attiny45.
-* Sensor UV.
+* Atiny85	* 1	Unidad.
+* 3231RTC	* 1 Unidad.
+* WS2812	* 5 Unidades.
+
+|	Attiny85	|		POWER		|		DS3231		|		WS2812		|			
+|		----	|		----		|		----		|		----		|
+|	PB4			|		GND			|		GND			|		GND			|
+|	PB8			|		VCC			|		5V			|		5V			|
+|	PB2	PCINT2	|		-			|		SCL			|		-			|
+|	PB0 PCINT0	|		-			|		SDA			|		-			|
+|	PB1 PCNINT1	|		-			|		-			|		DATA		|
 
 ## CODIGO
 
@@ -32,8 +41,8 @@ bool timeChange(void);
 void LedErrors(void);
 ```
 |	 Tipo				|	 Color		|		 Parpadeo	|		Status		|
-|	  Sistema			|	----		|		----		|		----		|
-|	 Error Sistema		|	_Verde_		|			1		|		WORK		|
+|	  ----				|	----		|		----		|		----		|
+|	  Sistema			|	_Verde_		|			1		|		WORK		|
 |	 Error Sistema		|	_Rojo_		|			2		|	TIME_COMPILE	|
 |	 Error Sistema		|	_Rojo_		|			3		|	TIME_SET		|
 |	 Error Sistema		|	_Rojo_		|			4		|	TIME_GET		|
