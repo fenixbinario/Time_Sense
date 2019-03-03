@@ -2,10 +2,14 @@
 
 _Este sentido te permite tener una percepción del tiempo solar sobre la tierra._
 
+
+
 ## REQUISITOS
 
 ### Software
-* Tener instalado `ATTinyCore` by Spence Konde [Más INFO](https://github.com/SpenceKonde/ATTinyCore).
+* Instalar: `<ATTinyCore.h>` by Spence Konde [Más INFO](https://github.com/SpenceKonde/ATTinyCore).
+* Instalar: `<TinyWireM.h>`	by [Más INFO](https://github.com/SpenceKonde/ATTinyCore).
+* Instalar: `<3232RTC.h>`	by [Más INFO](https://github.com/SpenceKonde/ATTinyCore).
 
 ### Hardware
 * Atiny85	* 1	Unidad.
@@ -20,27 +24,50 @@ _Este sentido te permite tener una percepción del tiempo solar sobre la tierra.
 |	PB0 PCINT0	|		-			|		SDA			|		-			|
 |	PB1 PCNINT1	|		-			|		-			|		DATA		|
 
-## CODIGO
+
+
+
+## CÓDIGO
+_Comentarios sobre las funciones y sus conexiones._
 
 ### Retorna la fecha en el momento de la compilación.
 ``` c++
 time_t compileTime(void);
+...
+..
+.
+//La fecha en el momento de la compilación es pasada por parámetro
+//al reloj DS3231 para ajustar la nueva hora.
+RTC.set(compileTime());   
+.
 ```
+
 
 
 ### Retorna ```TRUE``` si ha cambiado la hora.
 ``` c++
-bool timeChange(void);					
+bool timeChange(void);
+...
+..
+.
+void rotationSolar(void) 
+{
+	if (timeChange)
+	{
+		status = TIME_CHANGE;
+		LedErrors();
+		onHot(); ......
+.
 ```
 * _Ejemplo: if(17 != 16) ... retorna `TRUE` ._
 * _Ejemplo: if(17 != 17) ... retorna `FALSE` ._
 
 
-### Indicamediante Codigo de color y parpadeo si hay una error y cual es.
+### Código de `Tipo`, `Color` y `Parpadeo` para indicar el `Estado` del *Sistema*.
 ``` c++
 void LedErrors(void);
 ```
-|	 Tipo				|	 Color		|		 Parpadeo	|		Status		|
+|	 Tipo				|	 Color		|		 Parpadeo	|		Estado		|
 |	  ----				|	----		|		----		|		----		|
 |	  Sistema			|	_Verde_		|			1		|		WORK		|
 |	 Error Sistema		|	_Rojo_		|			2		|	TIME_COMPILE	|
@@ -49,7 +76,7 @@ void LedErrors(void);
 |	  Sistema			|	_Azul_		|			5		|	TIME_CHANGE		|
 
 
-###	Establece el color para el LED indicador
+###	Establece el color para el `LED indicador`.
 ``` c++
 void setColor(int, int, int);
 ```
@@ -80,7 +107,8 @@ void rotationSolar(void);				//Turn on only the heat source associated with the 
  ```
 
 
-### *Pasos*
+## DESPLIEGUE
+*PASOS*
 * Para desplegar y construir por ti mismo este órgano y sentido sigue **Desplequegar**.
 * Sigue cada unos de los pasos.
 * Que hardware necesitas?

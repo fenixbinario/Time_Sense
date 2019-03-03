@@ -4,14 +4,19 @@ Created:	02/03/2019 15:57:04
 Author:	@fenixbinario | www.fenixbinario.com
 
 Address 0x00-0x12 for DS3231
-ATTINY - CONNECTION
-							
-Attiny85			POWER		DS3231		WS2812
-PB4					GND			GND			GND
-PB8					VCC			5V			5V 
-PB2	PCINT2						SCL
-PB0 PCINT0						SDA
-PB1 PCNINT1									DATA
+
+* Atiny85	* 1	Unidad.
+* 3231RTC	* 1 Unidad.
+* WS2812	* 5 Unidades.
+
+|	Attiny85	|		POWER		|		DS3231		|		WS2812		|
+|		----	|		----		|		----		|		----		|
+|	PB4			|		GND			|		GND			|		GND			|
+|	PB8			|		VCC			|		5V			|		5V			|
+|	PB2	PCINT2	|		-			|		SCL			|		-			|
+|	PB0 PCINT0	|		-			|		SDA			|		-			|
+|	PB1 PCNINT1	|		-			|		-			|		DATA		|
+
 */
 //EARTH HOURS
 enum Hours : byte {Zero, One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Eleven, Twleve, Thirteen, Fourteen, Fifteen, Sixteen, Seventeen, Eighteen, Nineteen, Twenty, TwentyOne, TwentyTwo, TwentyThree}hours;
