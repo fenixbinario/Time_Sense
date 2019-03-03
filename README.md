@@ -8,7 +8,7 @@ _Este sentido te permite tener una percepción del tiempo solar sobre la tierra.
 
 ### Software
 * Instalar	Tarjeta:	`<ATTinyCore.h>`	by *Spence Konde*		[Más INFO](https://github.com/SpenceKonde/ATTinyCore).
-* Instalar	Librería:						by *Adafruit*			[Más INFO](https://github.com/adafruit/Adafruit_NeoPixel).
+* Instalar	Librería:	---------------		by *Adafruit*			[Más INFO](https://github.com/adafruit/Adafruit_NeoPixel).
 * Instalar	Librería:	`<EasyNeoPixels.h>`	by *Evelyn Masso*		[Más INFO](https://github.com/outofambit/easy-neopixels).
 * Instalar	Librería:	`<DS3232RTC.h>`		by *JChristensen*		[Más INFO](https://github.com/JChristensen/DS3232RTC).
 
@@ -18,10 +18,10 @@ _Este sentido te permite tener una percepción del tiempo solar sobre la tierra.
 * WS2812	* 5 Unidades.
 * Led RGB	* 1 Unidad.
 * 330 ohm	* 3 Unidades.
-* 33uF		* 1 Unidad.
+* 33 uF		* 1 Unidad.
 * Power 5v	* 1 Unidad.
 
-### IO
+### E/S
 |	Attiny85	|		POWER		|		DS3231		|		WS2812		|			
 |		----	|		----		|		----		|		----		|
 |	PB4			|		GND			|		GND			|		GND			|
@@ -86,9 +86,21 @@ void rotationSolar(void)
 * _Ejemplo: if(17 != 17) ... retorna `FALSE` ._
 
 
+
 ### Código de `Tipo`, `Color` y `Parpadeo` para indicar el `Estado` del *Sistema*.
 ``` c++
 void LedErrors(void);
+...
+..
+.
+void ledErr..
+	    ..
+		writeEasyNeoPixel(0, redValue, greenValue, blueValue);
+		delay(500);
+		writeEasyNeoPixel(0, LOW);
+.
+..
+...
 ```
 |	 Tipo				|	 Color		|		 Parpadeo	|		Estado		|
 |	  ----				|	----		|		----		|		----		|
@@ -99,10 +111,13 @@ void LedErrors(void);
 |	  Sistema			|	_Azul_		|			5		|	TIME_CHANGE		|
 
 
+
 ###	Establece el color para el `LED indicador`.
 ``` c++
 void setColor(int, int, int);
 ```
+
+
 
 ### Establece en `Off` todas las fuentes de calor
 ``` c++
