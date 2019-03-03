@@ -13,20 +13,30 @@ _Este sentido te permite tener una percepción del tiempo solar sobre la tierra.
 
 ## CODIGO
 
-##### Retorna la fecha en el momento de la compilación.
+#### Retorna la fecha en el momento de la compilación.
 ``` c++
-time_t compileTime(void);				//Function to return the compile date and time as a time_t value
-```
-##### Retorna ```TRUE``` si ha cambiado la hora.
-* _Ejemplo: if(17 != 16) ... retorna `TRUE` ._
-* _Ejemplo: if(17 != 17) ... retorna `FALSE` ._
-``` c++
-bool timeChange(void);					//Change Hour
+time_t compileTime(void);
 ```
 
+
+#### Retorna ```TRUE``` si ha cambiado la hora.
 ``` c++
-void LedErrors(void);					//RED (Error System) Blue(Busy System) Green(System is Work)
+bool timeChange(void);					
 ```
+* _Ejemplo: if(17 != 16) ... retorna `TRUE` ._
+* _Ejemplo: if(17 != 17) ... retorna `FALSE` ._
+
+
+#### Indicamediante Codigo de color y parpadeo si hay una error y cual es.
+``` c++
+void LedErrors(void);
+```
+|	##### Color	|	##### Parpadeo	|	##### Status	|
+|	_Verde_		|			1		|	WORK			|
+|	_Rojo_		|			2		|	TIME_SET		|
+
+
+
 ``` c++
 void setColor(int, int, int);			//LedError color blink
 ```
