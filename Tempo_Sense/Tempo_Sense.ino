@@ -5,10 +5,22 @@ Author:	@fenixbinario | www.fenixbinario.com
 
 Address 0x00-0x12 for DS3231
 
+### Software
+* Instalar	Tarjeta:	`<ATTinyCore.h>`	by *Spence Konde*		[Más INFO](https://github.com/SpenceKonde/ATTinyCore).
+* Instalar	Librería:	---------------		by *Adafruit*			[Más INFO](https://github.com/adafruit/Adafruit_NeoPixel).
+* Instalar	Librería:	`<EasyNeoPixels.h>`	by *Evelyn Masso*		[Más INFO](https://github.com/outofambit/easy-neopixels).
+* Instalar	Librería:	`<DS3232RTC.h>`		by *JChristensen*		[Más INFO](https://github.com/JChristensen/DS3232RTC).
+
+### Hardware
 * Atiny85	* 1	Unidad.
 * 3231RTC	* 1 Unidad.
 * WS2812	* 5 Unidades.
+* Led RGB	* 1 Unidad.
+* 330 ohm	* 3 Unidades.
+* 33 uF		* 1 Unidad.
+* Power 5v	* 1 Unidad.
 
+### E/S
 |	Attiny85	|		POWER		|		DS3231		|		WS2812		|
 |		----	|		----		|		----		|		----		|
 |	PB4			|		GND			|		GND			|		GND			|

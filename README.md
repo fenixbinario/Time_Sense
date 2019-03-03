@@ -93,11 +93,12 @@ void LedErrors(void);
 ...
 ..
 .
-void ledErr..
-	    ..
-		writeEasyNeoPixel(0, redValue, greenValue, blueValue);
-		delay(500);
-		writeEasyNeoPixel(0, LOW);
+void LedErrors...
+	switch (status)
+		{
+		case WORK:			setColor(0, 255, 0); // Green Color
+			break;
+		case TIME_COMPILE: ....
 .
 ..
 ...
@@ -115,6 +116,14 @@ void ledErr..
 ###	Establece el color para el `LED indicador`.
 ``` c++
 void setColor(int, int, int);
+...
+..
+.
+void setColor...
+	    ..
+		writeEasyNeoPixel(0, redValue, greenValue, blueValue);
+		delay(500);
+		writeEasyNeoPixel(0, LOW);
 ```
 
 
@@ -122,6 +131,17 @@ void setColor(int, int, int);
 ### Establece en `Off` todas las fuentes de calor
 ``` c++
 void offHot(void);
+...
+..
+.
+void offHot...
+{
+	for (byte i = 0; i <= 5; i++)
+	{
+		writeEasyNeoPixel(i, LOW);...
+.
+..
+...
 ```
 
 ### Establece en `On` la fuente de calor segun la rotacion de la tierra y la hora terrestre.
@@ -136,13 +156,27 @@ void setHot(byte);						//Heat ON
 
 ### Setup()
 ``` c++
-void rotationBegin(void);				//Within the setup() function 
+void rotationBegin(void);				//Within the setup()
+...
+..
+.
+void setup() {	
+	rotationBegin();
+}
 ```
 
 ### Loop()
 ``` c++
-void rotationSolar(void);				//Turn on only the heat source associated with the rotation of the sun.
+void rotationSolar(void);
+...
+..
+.
+void loop() 
+{
+	rotationSolar();
+}
  ```
+
 
 
 ## DESPLIEGUE
