@@ -13,13 +13,13 @@ _Este sentido te permite tener una percepción del tiempo solar sobre la tierra.
 
 ## CODIGO
 
-#### Retorna la fecha en el momento de la compilación.
+### Retorna la fecha en el momento de la compilación.
 ``` c++
 time_t compileTime(void);
 ```
 
 
-#### Retorna ```TRUE``` si ha cambiado la hora.
+### Retorna ```TRUE``` si ha cambiado la hora.
 ``` c++
 bool timeChange(void);					
 ```
@@ -27,7 +27,7 @@ bool timeChange(void);
 * _Ejemplo: if(17 != 17) ... retorna `FALSE` ._
 
 
-#### Indicamediante Codigo de color y parpadeo si hay una error y cual es.
+### Indicamediante Codigo de color y parpadeo si hay una error y cual es.
 ``` c++
 void LedErrors(void);
 ```
