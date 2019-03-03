@@ -7,15 +7,21 @@ _Este sentido te permite tener una percepción del tiempo solar sobre la tierra.
 ## REQUISITOS
 
 ### Software
-* Instalar: `<ATTinyCore.h>` by Spence Konde [Más INFO](https://github.com/SpenceKonde/ATTinyCore).
-* Instalar: `<TinyWireM.h>`	by [Más INFO](https://github.com/SpenceKonde/ATTinyCore).
-* Instalar: `<3232RTC.h>`	by [Más INFO](https://github.com/SpenceKonde/ATTinyCore).
+* Instalar	Tarjeta:	`<ATTinyCore.h>`	by *Spence Konde*		[Más INFO](https://github.com/SpenceKonde/ATTinyCore).
+* Instalar	Librería:						by *Adafruit*			[Más INFO](https://github.com/adafruit/Adafruit_NeoPixel).
+* Instalar	Librería:	`<EasyNeoPixels.h>`	by *Evelyn Masso*		[Más INFO](https://github.com/outofambit/easy-neopixels).
+* Instalar	Librería:	`<DS3232RTC.h>`		by *JChristensen*		[Más INFO](https://github.com/JChristensen/DS3232RTC).
 
 ### Hardware
 * Atiny85	* 1	Unidad.
 * 3231RTC	* 1 Unidad.
 * WS2812	* 5 Unidades.
+* Led RGB	* 1 Unidad.
+* 330 ohm	* 3 Unidades.
+* 33uF		* 1 Unidad.
+* Power 5v	* 1 Unidad.
 
+### IO
 |	Attiny85	|		POWER		|		DS3231		|		WS2812		|			
 |		----	|		----		|		----		|		----		|
 |	PB4			|		GND			|		GND			|		GND			|
@@ -29,6 +35,23 @@ _Este sentido te permite tener una percepción del tiempo solar sobre la tierra.
 
 ## CÓDIGO
 _Comentarios sobre las funciones y sus conexiones._
+
+### Variables Globala
+``` c++
+time_t t;
+static time_t tLast;
+...
+..
+.
+bool timeChange(void)
+{
+	t = now();
+	if (t != tLast) {
+		tLast = t;
+		return true;...
+.
+```
+
 
 ### Retorna la fecha en el momento de la compilación.
 ``` c++
