@@ -31,36 +31,41 @@ bool timeChange(void);
 ``` c++
 void LedErrors(void);
 ```
-|	 Color		|		 Parpadeo	|		Status		|
-|	----		|		----		|		----		|
-|	_Verde_		|			1		|		WORK		|
-|	_Rojo_		|			2		|	TIME_COMPILE	|
-|	_Rojo_		|			3		|	TIME_SET		|
-|	_Rojo_		|			4		|	TIME_GET		|
-|	_Azul_		|			5		|	TIME_CHANGE		|
+|	 Tipo				|	 Color		|		 Parpadeo	|		Status		|
+|	  Sistema			|	----		|		----		|		----		|
+|	 Error Sistema		|	_Verde_		|			1		|		WORK		|
+|	 Error Sistema		|	_Rojo_		|			2		|	TIME_COMPILE	|
+|	 Error Sistema		|	_Rojo_		|			3		|	TIME_SET		|
+|	 Error Sistema		|	_Rojo_		|			4		|	TIME_GET		|
+|	  Sistema			|	_Azul_		|			5		|	TIME_CHANGE		|
 
 
-
+###	Establece el color para el LED indicador
 ``` c++
-void setColor(int, int, int);			//LedError color blink
+void setColor(int, int, int);
 ```
 
+### Establece en `Off` todas las fuentes de calor
 ``` c++
-void offHot(void);						//All heat source turned OFF
+void offHot(void);
 ```
 
+### Establece en `On` la fuente de calor segun la rotacion de la tierra y la hora terrestre.
 ``` c++
-void onHot(void);						//Heat source turned ON
+void onHot(void);
 ```
 
+### Estable `255` o `0` en WS2812
 ``` c++
 void setHot(byte);						//Heat ON
 ```
 
+### Setup()
 ``` c++
 void rotationBegin(void);				//Within the setup() function 
 ```
 
+### Loop()
 ``` c++
 void rotationSolar(void);				//Turn on only the heat source associated with the rotation of the sun.
  ```
