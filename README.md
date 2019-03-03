@@ -36,7 +36,7 @@ _Este sentido te permite tener una percepción del tiempo solar sobre la tierra.
 ## CÓDIGO
 _Comentarios sobre las funciones y sus conexiones._
 
-### Variables Globala
+### Variables Globales
 ``` c++
 time_t t;
 static time_t tLast;
@@ -203,3 +203,11 @@ void rotationBegin(void)
 ..
 .
 ```
+
+
+
+
+## DATASHEET
+
+### ATtiny 25/45/85
+![x5 pin mapping](http://drazzy.com/e/img/PinoutT85a.jpg "Arduino Pin Mapping for ATtiny 85/45/25")
