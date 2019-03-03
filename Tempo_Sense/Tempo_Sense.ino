@@ -14,7 +14,7 @@ PB0 PCINT0						SDA
 PB1 PCNINT1									DATA
 */
 //EARTH HOURS
-enum Hours {Zero, One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Eleven, Twleve, Thirteen, Fourteen, Fifteen, Sixteen, Seventeen, Eighteen, Nineteen, Twenty, TwentyOne, TwentyTwo, TwentyThree}hours;
+enum Hours : byte {Zero, One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Eleven, Twleve, Thirteen, Fourteen, Fifteen, Sixteen, Seventeen, Eighteen, Nineteen, Twenty, TwentyOne, TwentyTwo, TwentyThree}hours;
 
 //LED INDICATOR
 enum ErrorSystem : byte
