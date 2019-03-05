@@ -81,7 +81,6 @@ void loop()
 
 //FUNCTION DECLARATION
 
-
 bool timeChange(void)
 {
 	t = now();

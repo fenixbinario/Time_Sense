@@ -37,6 +37,9 @@ _Este sentido te permite tener una percepción de la posición de la luz sol sob
 _Comentarios sobre las funciones y sus conexiones._
 
 ### Variables Globales
+*	`time_t t;`				_Tiempo en milisegudos de la hora **actual**._
+*	`static time_t tLast;`	_Tiempo en milisegudos de la hora **anterior**._
+
 ``` c++
 time_t t;
 static time_t tLast;
