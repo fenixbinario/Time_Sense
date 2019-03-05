@@ -6,13 +6,13 @@ _Este sentido te permite tener una percepción de la posición de la luz sol sob
 
 ## REQUISITOS
 
-### Software
+### `Software`
 * Instalar	Tarjeta:	------------------	by **Spence Konde**		[Más INFO](https://github.com/SpenceKonde/ATTinyCore).
 * Instalar	Librería:	------------------	by **Adafruit**			[Más INFO](https://github.com/adafruit/Adafruit_NeoPixel).
 * Instalar	Librería:	`<EasyNeoPixels.h>`	by **Evelyn Masso**		[Más INFO](https://github.com/outofambit/easy-neopixels).
 * Instalar	Librería:	`<DS3232RTC.h>`		by **JChristensen**		[Más INFO](https://github.com/JChristensen/DS3232RTC).
 
-### Hardware
+### `Hardware`
 * Atiny85	* 1	Unidad.
 * 3231RTC	* 1 Unidad.
 * WS2812	* 5 Unidades.
@@ -21,7 +21,7 @@ _Este sentido te permite tener una percepción de la posición de la luz sol sob
 * 33 uF		* 1 Unidad.
 * Power 5v	* 1 Unidad.
 
-### E/S
+### `E/S`
 |	Attiny85	|		POWER		|		DS3231		|		WS2812		|			
 |		----	|		----		|		----		|		----		|
 |	PB4			|		GND			|		GND			|		GND			|
@@ -56,7 +56,7 @@ bool timeChange(void)
 ```
 
 
-### Retorna la fecha en el momento de la compilación.
+### `compileTime()` Retorna la fecha en el momento de la compilación.
 ``` c++
 time_t compileTime(void);
 ...
@@ -70,7 +70,7 @@ RTC.set(compileTime());
 
 
 
-### Retorna ```TRUE``` si ha cambiado la hora.
+### `timeChange()` Retorna `TRUE` si ha cambiado la hora.
 ``` c++
 bool timeChange(void);
 ...
@@ -90,7 +90,7 @@ void rotationSolar(void)
 
 
 
-### Código de `Tipo`, `Color` y `Parpadeo` para indicar el `Estado` del *Sistema*.
+### `LedErrors()` Código de `Tipo`, `Color` y `Parpadeo` para indicar el `Estado` del *Sistema*.
 ``` c++
 void LedErrors(void);
 ...
@@ -116,7 +116,7 @@ void LedErrors...
 
 
 
-###	Establece el color para el `LED indicador`.
+###	`setColor()` Establece el color para el `LED indicador`.
 ``` c++
 void setColor(int, int, int);
 ...
@@ -131,7 +131,7 @@ void setColor...
 
 
 
-### Establece en `Off` todas las fuentes de calor
+### `offHot()` Establece en `Off` todas las fuentes de calor
 ``` c++
 void offHot(void);
 ...
@@ -147,17 +147,17 @@ void offHot...
 ...
 ```
 
-### Establece en `On` la fuente de calor segun la rotacion de la tierra y la hora terrestre.
+### `onHot()` Establece en `On` la fuente de calor segun la rotacion de la tierra y la hora terrestre.
 ``` c++
 void onHot(void);
 ```
 
-### Estable `255` o `0` en WS2812
+### `setHot()` Estable `255` o `0` en WS2812
 ``` c++
 void setHot(byte);						//Heat ON
 ```
 
-### Setup()
+### `rotationBegin()`  Setup()
 ``` c++
 void rotationBegin(void);				//Within the setup()
 ...
@@ -168,7 +168,7 @@ void setup() {
 }
 ```
 
-### Loop()
+### `rotationSolar()` Loop()
 ``` c++
 void rotationSolar(void);
 ...
