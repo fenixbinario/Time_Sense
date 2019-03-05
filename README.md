@@ -184,9 +184,9 @@ void loop()
 
 ## DESPLIEGUE
 *PASOS*
-* Asegurese de que tienes todo el hardware, conexiones, alimentación, tarjeta y librerías. 
+* Asegurese de tener todo el hardware, conexiones, alimentación, tarjeta y librerías. 
 * Monte en una tarjeta de desarrollo las conexiones o ensamble una PCB.
-* Ten cuidado lo la alimentación.
+* Ten cuidado con la alimentación.
 * Añade un condensador electrolitico entre el PIN RESET y GND del programador.
 * Asegurate de tener configurado el DS3231 ¿Tienes el reloj con la hora ajustada?
 
