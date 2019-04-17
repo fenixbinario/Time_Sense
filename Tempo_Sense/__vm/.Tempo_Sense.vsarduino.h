@@ -14,7 +14,7 @@
 #define _VSARDUINO_H_
 #define __AVR_ATtiny85__
 #define __AVR_ATTINY85__
-#define F_CPU 8000000L
+#define F_CPU 16000000L
 #define ARDUINO 10807
 #define ARDUINO_AVR_ATTINYX5
 #define ARDUINO_ARCH_AVR
