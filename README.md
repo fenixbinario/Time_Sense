@@ -38,6 +38,8 @@ _Comentarios sobre las funciones y sus conexiones._
 ### Variables Globales
 *	`time_t t;`				_Tiempo en milisegudos de la hora **actual**._
 *	`static time_t tLast;`	_Tiempo en milisegudos de la hora **anterior**._
+*	`byte nPixel = 12`		_Numero de modulos **WS2811**._
+*	`byte Hot = 255`		_Temperatura de la resistencia **0Cº a ~50Cº**._
 
 ``` c++
 time_t t;
