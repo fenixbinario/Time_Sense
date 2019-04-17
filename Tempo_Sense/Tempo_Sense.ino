@@ -245,10 +245,10 @@ void LedErrors()
 
 void setColor(int redValue, int greenValue, int blueValue) 
 {
-	for (byte i = 0; i <= status; i++)
+	for (byte parpadeo = 0; parpadeo <= status; parpadeo++)
 	{
-		writeEasyNeoPixel(0, redValue, greenValue, blueValue);
+		writeEasyNeoPixel(12, redValue, greenValue, blueValue);
 		delay(500);
-		writeEasyNeoPixel(0, LOW);
+		writeEasyNeoPixel(12, LOW);
 	}
 }
