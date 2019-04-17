@@ -12,25 +12,24 @@ _Este sentido te permite tener una percepción de la posición de la luz sol sob
 * Instalar	Librería:	`<EasyNeoPixels.h>`	by **Evelyn Masso**		[Más INFO](https://github.com/outofambit/easy-neopixels).
 * Instalar	Librería:	`<DS3232RTC.h>`		by **JChristensen**		[Más INFO](https://github.com/JChristensen/DS3232RTC).
 
-### `Hardware`
+### Hardware
 * Atiny85	* 1	Unidad.
-* 3231RTC	* 1 Unidad.
-* WS2812	* 5 Unidades.
-* Led RGB	* 1 Unidad.
+* 3231RTC	* 1	Unidad.
+* WS2812	* 12 + 1 Opcional.
+* Led RGB	* 1 Unidad Opcional.
 * 330 ohm	* 3 Unidades.
 * 33 uF		* 1 Unidad.
-* Power 5v	* 1 Unidad.
+* Y5019		* 1 Unidad.
+* Battery 3.7 1000 mAh
 
-### `E/S`
-|	Attiny85	|		POWER		|		DS3231		|		WS2812		|			
+### E/S
+|	Attiny85	|		POWER		|		DS3231		|		WS2812		|
 |		----	|		----		|		----		|		----		|
-|	PB4			|		GND			|		GND			|		GND			|
-|	PB8			|		VCC			|		5V			|		5V			|
+|	PIN4 GND	|		GND			|		GND			|		GND			|
+|	PIN5 VCC	|		VCC			|		5V			|		5V			|
 |	PB2	PCINT2	|		-			|		SCL			|		-			|
 |	PB0 PCINT0	|		-			|		SDA			|		-			|
-|	PB1 PCNINT1	|		-			|		-			|		DATA		|
-
-
+|	PB4 PCNINT4	|		-			|		-			|		DATA		|
 
 
 ## CÓDIGO

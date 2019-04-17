@@ -13,12 +13,13 @@ Address 0x00-0x12 for DS3231
 
 ### Hardware
 * Atiny85	* 1	Unidad.
-* 3231RTC	* 1 Unidad.
-* WS2812	* 5 Unidades.
-* Led RGB	* 1 Unidad.
+* 3231RTC	* 1	Unidad.
+* WS2812	* 12 + 1 Opcional.
+* Led RGB	* 1 Unidad Opcional.
 * 330 ohm	* 3 Unidades.
 * 33 uF		* 1 Unidad.
-* Power 5v	* 1 Unidad.
+* Y5019		* 1 Unidad.
+* Battery 3.7 1000 mAh
 
 ### E/S
 |	Attiny85	|		POWER		|		DS3231		|		WS2812		|
