@@ -181,23 +181,23 @@ void rotationBegin(void)
 	// external RTC by calling RTC.get() every five minutes by default.
 	setSyncProvider(RTC.get);
 	//ERROR CLOCK
-	(timeStatus() != timeSet) ? status = TIME_SET : status = WORK;
+	//(timeStatus() != timeSet) ? status = TIME_SET : status = WORK;
 
 	// SetUp-> Pixel Hot source
-	setupEasyNeoPixels(PCINT3, 5); // (	4 MODULE ws2812 ) * (3 SourceHot ) = 12 Hours  + 1 Module for Led Indicator
+	setupEasyNeoPixels(PCINT3, 12); // (	12 MODULE ws2812 ) * (12 SourceHot ) = 24 Hours  on 12 point
 }
 void rotationSolar(void) 
 {
 	if (timeChange)
 	{
-		status = TIME_CHANGE;
-		LedErrors();
 		onHot();
+		status = TIME_CHANGE;
+		//LedErrors();
 	}
 	else
 	{
 		status = WORK;
-		LedErrors();
+		//LedErrors();
 	}
 };
 
