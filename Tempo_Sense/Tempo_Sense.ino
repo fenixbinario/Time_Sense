@@ -23,11 +23,11 @@ Address 0x00-0x12 for DS3231
 ### E/S
 |	Attiny85	|		POWER		|		DS3231		|		WS2812		|
 |		----	|		----		|		----		|		----		|
-|	PB4			|		GND			|		GND			|		GND			|
-|	PB8			|		VCC			|		5V			|		5V			|
+|	PIN4 GND	|		GND			|		GND			|		GND			|
+|	PIN5 VCC	|		VCC			|		5V			|		5V			|
 |	PB2	PCINT2	|		-			|		SCL			|		-			|
 |	PB0 PCINT0	|		-			|		SDA			|		-			|
-|	PB1 PCNINT1	|		-			|		-			|		DATA		|
+|	PB4 PCNINT4	|		-			|		-			|		DATA		|
 
 */
 //EARTH HOURS
@@ -184,7 +184,7 @@ void rotationBegin(void)
 	//(timeStatus() != timeSet) ? status = TIME_SET : status = WORK;
 
 	// SetUp-> Pixel Hot source
-	setupEasyNeoPixels(PCINT3, 12); // (	12 MODULE ws2812 ) * (12 SourceHot ) = 24 Hours  on 12 point
+	setupEasyNeoPixels(PCINT4, 12); // (	12 MODULE ws2812 ) * (12 SourceHot ) = 24 Hours  on 12 point
 }
 void rotationSolar(void) 
 {
